@@ -1,0 +1,172 @@
+/* .absolute {
+    position: absolute !important;
+}
+
+#absolute {
+    position: absolute !important;
+}
+
+.atom {
+    position: absolute !important;
+} */
+
+.absolute {
+    position: absolute !important;
+}
+
+.atom {
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+
+.nucleus {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 100%;
+}
+
+.neutron {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    top: -10px;
+    left: 25px;
+    background: #fff;
+    border-radius: 100%;
+    animation: ne 1.5s linear infinite;
+}
+
+.elipsis {
+    position: absolute;
+    top: 0px;
+    left: 65px;
+    width: 65px;
+    height: 200px;
+    border: 1px solid #fff;
+    border-radius: 80px / 240px;
+}
+
+.elipsis:nth-of-type(2) {
+    -moz-transform: rotate(55deg);
+    -wekbit-transform: rotate(55deg);
+    transform: rotate(55deg);
+}
+
+.elipsis:nth-of-type(2) :first-child {
+    animation-delay: 0.4s;
+}
+
+.elipsis:nth-of-type(3) {
+    -moz-transform: rotate(55deg);
+    -weknit-transform: rotate(55deg);
+    transform: rotate(-55deg);
+}
+
+.elipsis:nth-of-type(3) :first-child {
+    animation-delay: 0.6s;
+}
+
+@keyframes ne {
+    0% {
+        top: -10px;
+        left: 25px;
+    }
+    5% {
+        top: 0px;
+        left: 35px;
+    }
+    10% {
+        top: 10px;
+        left: 45px;
+    }
+    15% {
+        top: 20px;
+        left: 45px;
+    }
+    20% {
+        top: 30px;
+        left: 55px;
+    }
+    25% {
+        top: 40px;
+        left: 55px;
+    }
+    30% {
+        top: 90px;
+        left: 60px;
+    }
+    35% {
+        top: 140px;
+        left: 55px;
+    }
+    40% {
+        top: 160px;
+        left: 45px;
+    }
+    45% {
+        top: 180px;
+        left: 35px;
+    }
+    50% {
+        top: 200px;
+        left: 25px;
+    }
+    55% {
+        top: 180px;
+        left: 15px;
+    }
+    60% {
+        top: 160px;
+        left: 5px;
+    }
+    65% {
+        top: 140px;
+        left: -5px;
+    }
+    70% {
+        top: 90px;
+        left: -10px;
+    }
+    75% {
+        top: 40px;
+        left: -5px;
+    }
+    80% {
+        top: 30px;
+        left: 0px;
+    }
+    85% {
+        top: 20px;
+        left: 5px;
+    }
+    90% {
+        top: 10px;
+        left: 15px;
+    }
+    95% {
+        top: 0px;
+        left: 25px;
+    }
+    100% {
+        top: -10px;
+        left: 25px;
+    }
+}
+
+[_ngcontent-c1],
+[_ngcontent-c1]::before,
+[_ngcontent-c1]::after {
+    position: absolute !important;
+    box-sizing: border-box !important;
+}
