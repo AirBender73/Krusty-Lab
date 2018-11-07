@@ -1,5 +1,8 @@
+<particles [style]="myStyle" [width]="width" [height]="height" [params]="myParams"></particles>
+
+<!-- -------------MENU PRINCIPAL------------ -->
+
 <div class="container contenedor-atomo">
-    <particles [style]="myStyle" [width]="width" [height]="height" [params]="myParams"></particles>
     <div [ngClass]="{'bounceOut': animationIconos}" class="animated row pt-5" *ngIf="mostrarIconos">
         <div class="col-6 text-right">
             <button (click)="ocultarIconos()" class="ctm-btn-none btn btn-outline-dark m-auto d-block">
