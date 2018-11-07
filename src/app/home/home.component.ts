@@ -26,7 +26,10 @@ export class HomeComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.audioBackgroung();
+    setTimeout(() => {
+      this.audioBackgroung();
+    }, 2000);  
+    
     this.particles();
   }
 
@@ -52,7 +55,7 @@ export class HomeComponent implements OnInit {
   }
   
   playAtomo(){
-    console.log("funcion play");
+    this.acelerarAtomo = true;
     var audioElect:any = document.getElementById("soundElect");
     audioElect.muted = false;
     audioElect.autoplay = true;
@@ -60,6 +63,7 @@ export class HomeComponent implements OnInit {
 
     setTimeout(() => {
       audioElect.muted = true;
+      this.acelerarAtomo = false;
     }, 1500);
   }
 

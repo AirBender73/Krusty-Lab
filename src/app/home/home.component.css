@@ -78,12 +78,16 @@ svg circle.kern {
 
 /* ------HOVER------ */
 
-
-/* .ctm-hover:hover {
+.ctm-hover:hover {
     cursor: pointer;
     -webkit-animation-name: shake;
     animation-name: shake;
-} */
+}
+
+.ctm-hover:hover .tail,
+.ctm-hover:hover .electron {
+    animation: atom 1.0s infinite linear;
+}
 
 path.tail {
     stroke: #47cdd6 !important;
