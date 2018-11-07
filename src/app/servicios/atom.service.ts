@@ -31,22 +31,25 @@ export class AtomService {
 
   navegar(option){
     this.ocultarIconos();
-    switch (option){
-      case 'contact':
-        console.log("FUNCIONA EL CONTACTO");
-        this.contact = true;
-      break;
-      case this.portafolio:
-        this.portafolio = true;
-      break;
-    }
+    setTimeout(() => {
+      switch (option){
+        case 'contact':
+          console.log("FUNCIONA EL CONTACTO");
+          this.contact = true;
+        break;
+        case this.portafolio:
+          this.portafolio = true;
+        break;
+      }
+    }, 750);
+    
   }
   
   ocultarIconos(){
     this.animationIconos = true;
-    
+    this.atomAnimation(true);
+
     setTimeout(() => {
-      this.atomAnimation(true);
       this.mostrarIconos = false;
       this.animationIconos = false;  
     }, 750);

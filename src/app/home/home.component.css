@@ -20,10 +20,7 @@
 /* ------------Imagenes------------ */
 
 .ctm-img {
-    width: 100px;
-    -webkit-transition: width 0.8s;
-    /* Safari */
-    transition: width 0.8s;
+    width: 100%;
 }
 
 .ctm-btn-sound {
@@ -32,11 +29,13 @@
     font-size: 23px;
 }
 
-button .ctm-img:hover {
-    cursor: pointer;
-    width: 115px;
+.btn-outline-dark {
+    width: 130px;
+    -webkit-transition: width 0.5s;
+    /* Safari */
+    transition: width 0.5s;
 }
 
-.div-icons {
-    /* height: 8rem; */
+.btn-outline-dark:hover {
+    width: 145px !important;
 }
