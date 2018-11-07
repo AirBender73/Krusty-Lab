@@ -1,78 +1,91 @@
-<particles [style]="myStyle" [width]="width" [height]="height" [params]="myParams"></particles>
+<!-- ------------ PARTICLES-BACKGROUND ------------ -->
 
-<!-- -------------MENU PRINCIPAL------------ -->
+<particles [style]="atomS.myStyle" [width]="atomS.width" [height]="atomS.height" [params]="atomS.myParams"></particles>
+
+<!-- ------------ /PARTICLES-BACKGROUND ------------ -->
+
+<!-- ------------- MAIN-MENU ------------ -->
 
 <div class="container contenedor-atomo">
-    <div [ngClass]="{'bounceOut': animationIconos}" class="animated row pt-5" *ngIf="mostrarIconos">
-        <div class="col-6 text-right">
-            <button (click)="ocultarIconos()" class="ctm-btn-none btn btn-outline-dark m-auto d-block">
-                <img src="../../assets/img/idea.png" class="ctm-img">
-            </button>
+
+
+
+    <div class="row h-75 pt-5 justify-content-md-center">
+        <!-- ------------ ICON-1-2 ------------ -->
+        <div class="div-icons d-flex w-100 h-25">
+            <div [ngClass]="{'bounceOut': animationIconos}" class="animated d-flex w-100" *ngIf="atomS.mostrarIconos">
+                <div class="col-6 text-right">
+                    <button (click)="atomS.ocultarIconos()" class="ctm-btn-none btn btn-outline-dark m-auto d-block">
+                        <img src="../../assets/img/idea.png" class="ctm-img">
+                    </button>
+                </div>
+
+                <div class="col-6 text-left">
+                    <button (click)="atomS.ocultarIconos()" class="ctm-btn-none btn btn-outline-dark m-auto d-block">
+                        <img src="../../assets/img/tactil.png" class="ctm-img">
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="col-6 text-left">
-            <button (click)="ocultarIconos()" class="ctm-btn-none btn btn-outline-dark m-auto d-block">
-                <img src="../../assets/img/tactil.png" class="ctm-img">
-            </button>
-        </div>
-    </div>
-    <div [ngClass]="{'atomoIcon': !mostrarIconos}" class="row justify-content-md-center">
-        <div [ngClass]="{'bounceOut': animationIconos}" *ngIf="mostrarIconos" class="animated col-4 mt-5 align-self-center">
-            <button (click)="ocultarIconos()" class="ctm-btn-none btn btn-outline-dark m-auto d-block">
+        <!-- ------------ /ICON-1-2 ------------ -->
+
+        <!-- ------------ICON-2------------ -->
+
+        <div class="col-4 mt-5 align-self-center">
+
+            <app-contact></app-contact>
+
+            <button *ngIf="atomS.mostrarIconos" [ngClass]="{'bounceOut': animationIconos}" (click)="atomS.navegar('contact')" class="animated ctm-btn-none btn btn-outline-dark m-auto d-block">
                 <img src="../../assets/img/apoyar.png" class="ctm-img">
             </button>
         </div>
+
         <div class="col-4 m-auto align-self-center">
-            <div class="animated infinite ctm-hover">
-                <button class="btn-svg" (click)="playAtomo()">
-                    <svg class="atom" viewBox="0 0 100 100">
-                            <defs>
-                                <filter id="blur" x="-10" y="-10" width="120" height="120">
-                                    <feGaussianBlur in="SourceGraphic" stdDeviation=".4" />
-                                </filter>
-                                <filter id="blur2" x="-10" y="-10" width="120" height="120">
-                                    <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
-                                </filter>
-                            </defs>
-                            <g filter="url(#blur2)">
-                                <circle [ngClass]="{ 'nucleo': acelerarAtomo, 'kern' : !acelerarAtomo}" class="" cx="50" cy="50" r="2" />
-                            </g>
-                            <circle [ngClass]="{ 'nucleo': acelerarAtomo, 'kern' : !acelerarAtomo}" class="" cx="50" cy="50" r="2" />
-                            <g class="lines">
-                                <path class="" d="M  57.5,50 57.39,55.21 57.05,60.26 56.5,65 55.75,69.28 54.82,72.98 53.75,75.98 52.57,78.19 51.3,79.54 50,80 48.7,79.54 47.43,78.19 46.25,75.98 45.18,72.98 44.25,69.28 43.5,65 42.95,60.26 42.61,55.21 42.5,50 42.61,44.79 42.95,39.74 43.5,35 44.25,30.72 45.18,27.02 46.25,24.02 47.43,21.81 48.7,20.46 50,20 51.3,20.46 52.57,21.81 53.75,24.02 54.82,27.02 55.75,30.72 56.5,35 57.05,39.74 57.39,44.79 57.5,50"></path>
-                                <path class="" d="M  53.75,56.5 49.18,59 44.64,61.23 40.26,63.13 36.17,64.62 32.51,65.67 29.38,66.24 26.87,66.32 25.07,65.9 24.02,65 23.76,63.64 24.3,61.87 25.63,59.74 27.69,57.32 30.43,54.67 33.76,51.88 37.59,49.03 41.8,46.21 46.25,43.5 50.82,41 55.36,38.77 59.74,36.88 63.83,35.38 67.49,34.33 70.62,33.76 73.13,33.68 74.93,34.1 75.98,35 76.24,36.36 75.7,38.13 74.38,40.26 72.31,42.68 69.57,45.33 66.24,48.12 62.41,50.97 58.2,53.79 53.75,56.5"></path>
-                                <path class="" d="M  53.75,43.5 58.2,46.21 62.41,49.03 66.24,51.88 69.57,54.67 72.31,57.32 74.38,59.74 75.7,61.87 76.24,63.64 75.98,65 74.93,65.9 73.13,66.32 70.63,66.24 67.49,65.67 63.83,64.62 59.74,63.13 55.36,61.23 50.82,59 46.25,56.5 41.8,53.79 37.59,50.97 33.76,48.13 30.43,45.33 27.69,42.68 25.63,40.26 24.3,38.13 23.76,36.36 24.02,35 25.07,34.1 26.87,33.68 29.37,33.76 32.51,34.33 36.17,35.38 40.26,36.87 44.64,38.77 49.18,41 53.75,43.5"></path>
-                            </g>
-                            <g class="electronTails"  filter="url(#blur)" >
-                                <path [ngClass]="{ 'aceleradoTail': acelerarAtomo, 'tail': !acelerarAtomo}" class="tail1" d="M  57.5,50 57.39,55.21 57.05,60.26 56.5,65 55.75,69.28 54.82,72.98 53.75,75.98 52.57,78.19 51.3,79.54 50,80 48.7,79.54 47.43,78.19 46.25,75.98 45.18,72.98 44.25,69.28 43.5,65 42.95,60.26 42.61,55.21 42.5,50 42.61,44.79 42.95,39.74 43.5,35 44.25,30.72 45.18,27.02 46.25,24.02 47.43,21.81 48.7,20.46 50,20 51.3,20.46 52.57,21.81 53.75,24.02 54.82,27.02 55.75,30.72 56.5,35 57.05,39.74 57.39,44.79 57.5,50"></path>
-                                <path [ngClass]="{ 'aceleradoTail': acelerarAtomo, 'tail': !acelerarAtomo}" class="tail2" d="M  53.75,56.5 49.18,59 44.64,61.23 40.26,63.13 36.17,64.62 32.51,65.67 29.38,66.24 26.87,66.32 25.07,65.9 24.02,65 23.76,63.64 24.3,61.87 25.63,59.74 27.69,57.32 30.43,54.67 33.76,51.88 37.59,49.03 41.8,46.21 46.25,43.5 50.82,41 55.36,38.77 59.74,36.88 63.83,35.38 67.49,34.33 70.62,33.76 73.13,33.68 74.93,34.1 75.98,35 76.24,36.36 75.7,38.13 74.38,40.26 72.31,42.68 69.57,45.33 66.24,48.12 62.41,50.97 58.2,53.79 53.75,56.5"></path>
-                                <path [ngClass]="{ 'aceleradoTail': acelerarAtomo, 'tail': !acelerarAtomo}" class="tail3" d="M  53.75,43.5 58.2,46.21 62.41,49.03 66.24,51.88 69.57,54.67 72.31,57.32 74.38,59.74 75.7,61.87 76.24,63.64 75.98,65 74.93,65.9 73.13,66.32 70.63,66.24 67.49,65.67 63.83,64.62 59.74,63.13 55.36,61.23 50.82,59 46.25,56.5 41.8,53.79 37.59,50.97 33.76,48.13 30.43,45.33 27.69,42.68 25.63,40.26 24.3,38.13 23.76,36.36 24.02,35 25.07,34.1 26.87,33.68 29.37,33.76 32.51,34.33 36.17,35.38 40.26,36.87 44.64,38.77 49.18,41 53.75,43.5"></path>
-                            </g>
-                            <g class="electrons">
-                                <path [ngClass]="{ 'aceleradoElectron': acelerarAtomo, 'electron': !acelerarAtomo}" class="electron1" d="M  57.5,50 57.39,55.21 57.05,60.26 56.5,65 55.75,69.28 54.82,72.98 53.75,75.98 52.57,78.19 51.3,79.54 50,80 48.7,79.54 47.43,78.19 46.25,75.98 45.18,72.98 44.25,69.28 43.5,65 42.95,60.26 42.61,55.21 42.5,50 42.61,44.79 42.95,39.74 43.5,35 44.25,30.72 45.18,27.02 46.25,24.02 47.43,21.81 48.7,20.46 50,20 51.3,20.46 52.57,21.81 53.75,24.02 54.82,27.02 55.75,30.72 56.5,35 57.05,39.74 57.39,44.79 57.5,50"></path>
-                                <path [ngClass]="{ 'aceleradoElectron': acelerarAtomo, 'electron': !acelerarAtomo}" class="electron2" d="M  53.75,56.5 49.18,59 44.64,61.23 40.26,63.13 36.17,64.62 32.51,65.67 29.38,66.24 26.87,66.32 25.07,65.9 24.02,65 23.76,63.64 24.3,61.87 25.63,59.74 27.69,57.32 30.43,54.67 33.76,51.88 37.59,49.03 41.8,46.21 46.25,43.5 50.82,41 55.36,38.77 59.74,36.88 63.83,35.38 67.49,34.33 70.62,33.76 73.13,33.68 74.93,34.1 75.98,35 76.24,36.36 75.7,38.13 74.38,40.26 72.31,42.68 69.57,45.33 66.24,48.12 62.41,50.97 58.2,53.79 53.75,56.5"></path>
-                                <path [ngClass]="{ 'aceleradoElectron': acelerarAtomo, 'electron': !acelerarAtomo}" class="electron3" d="M  53.75,43.5 58.2,46.21 62.41,49.03 66.24,51.88 69.57,54.67 72.31,57.32 74.38,59.74 75.7,61.87 76.24,63.64 75.98,65 74.93,65.9 73.13,66.32 70.63,66.24 67.49,65.67 63.83,64.62 59.74,63.13 55.36,61.23 50.82,59 46.25,56.5 41.8,53.79 37.59,50.97 33.76,48.13 30.43,45.33 27.69,42.68 25.63,40.26 24.3,38.13 23.76,36.36 24.02,35 25.07,34.1 26.87,33.68 29.37,33.76 32.51,34.33 36.17,35.38 40.26,36.87 44.64,38.77 49.18,41 53.75,43.5"></path>
-                            </g>
-                        </svg>
-                </button>
-            </div>
-            <h1 class="text-center text-logo text-white font-weight-bold ">KRUSTY LAB</h1>
+
+            <!-- ------------ÁTOMO------------ -->
+            <app-atom></app-atom>
+            <!-- ------------/ÁTOMO------------ -->
+
         </div>
-        <div [ngClass]="{ 'bounceOut': animationIconos} " *ngIf="mostrarIconos " class="animated col-4 mt-5 align-self-center ">
-            <button (click)="ocultarIconos() " class="ctm-btn-none btn btn-outline-dark m-auto d-block ">
+
+        <!-- ------------ICONO-4------------ -->
+
+        <div class="col-4 mt-5 align-self-center">
+            <button [ngClass]="{ 'bounceOut': animationIconos}" *ngIf="atomS.mostrarIconos" (click)="atomS.ocultarIconos() " class="animated ctm-btn-none btn btn-outline-dark m-auto d-block ">
                 <img src="../../assets/img/controlar.png " class="ctm-img ">
             </button>
         </div>
+
+        <!-- ------------/ICONO-4------------ -->
+
     </div>
 </div>
 
+<!-- ------------ /MAIN-MENU ------------ -->
+
+<!-- ------------ COPYRIGHT ------------ -->
+
 <p class="text-center text-white m-auto w-100 ctm-copy ">Copyright © 2018 Krusty Lab - Software Development</p>
+
+<!-- ------------ /COPYRIGHT ------------ -->
+
+<!-- ------------ MUTED-BUTTON ------------ -->
+
+<button class="btn btn-outline-light ctm-btn-sound ctm-btn-none" (click)="atomS.muted()">
+        <i *ngIf="!atomS.backgrounMuted" class="fas fa-volume-up"></i>
+        <i *ngIf="atomS.backgrounMuted" class="fas fa-volume-mute"></i>
+</button>
+
+<!-- ------------ /MUTED-BUTTON ------------ -->
+
+<!-- ------------ AUDIO ------------ -->
+
 <audio controls class="d-none" id="backgroundSound">
     <source src="../../assets/sounds/background-sound.mp3" type="audio/mpeg">
 </audio>
-<button class="btn btn-outline-light ctm-btn-sound ctm-btn-none" (click)="muted()">
-    <i *ngIf="!backgrounMuted" class="fas fa-volume-up"></i>
-    <i *ngIf="backgrounMuted" class="fas fa-volume-mute"></i>
-</button>
+
 <audio controls class="d-none" id="soundElect">
     <source src="../../assets/sounds/logo-sound.mp3" type="audio/mpeg">
 </audio>
+
+<!-- ------------ /AUDIO ------------ -->

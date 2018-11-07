@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { AtomService } from '../servicios/atom.service';
 
-
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-atom',
+  templateUrl: './atom.component.html',
+  styleUrls: ['./atom.component.css']
 })
-export class HomeComponent implements OnInit {
+export class AtomComponent implements OnInit {
 
   constructor(
     public atomS: AtomService
@@ -15,6 +14,6 @@ export class HomeComponent implements OnInit {
    }
 
   ngOnInit() {
-    
   }
+
 }
