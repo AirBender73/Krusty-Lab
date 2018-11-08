@@ -1,5 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 
+@font-face {
+    font-family: Comfortaa-Bold;
+    src: url(../src/assets/fonts/Comfortaa-Bold.ttf);
+}
+
+@font-face {
+    font-family: Comfortaa-Light;
+    src: url(../src/assets/fonts/Comfortaa-Light.ttf);
+}
+
+@font-face {
+    font-family: Comfortaa-Regular;
+    src: url(../src/assets/fonts/Comfortaa-Regular.ttf);
+}
+
+.comfortaa-b {
+    font-family: Comfortaa-Bold;
+}
+
+.comfortaa-l {
+    font-family: Comfortaa-Light;
+}
+
+.comfortaa-r {
+    font-family: Comfortaa-Regular;
+}
+
 .justify {
     text-align: justify;
 }
@@ -32,6 +59,23 @@ body {
 .ctm-btn-none {
     border-width: 0px !important;
     border-radius: 20px !important;
+}
+
+.social {
+    font-size: 30px;
+}
+
+.smoke {
+    color: rgb(146, 146, 146) !important;
+    background-color: rgb(124, 124, 124);
+}
+
+.icon-contact {
+    font-size: 20px;
+}
+
+.btn-back {
+    font-size: 33px !important;
 }
 
 

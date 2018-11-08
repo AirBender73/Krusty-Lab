@@ -9,13 +9,15 @@ import { AtomComponent } from './atom/atom.component';
 
 //SERVICIOS
 import { AtomService } from './servicios/atom.service';
+import { ContactInfoComponent } from './contact-info/contact-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ContactComponent,
-    AtomComponent
+    AtomComponent,
+    ContactInfoComponent
   ],
   imports: [
     BrowserModule,

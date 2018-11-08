@@ -13,6 +13,7 @@ export class AtomService {
 
    mostrarIconos: boolean = true;
    animationIconos: boolean = false;
+   animationIconosIn: boolean = false;
    acelerarAtomo: boolean = false;
   
    contact: boolean = false;
@@ -45,6 +46,26 @@ export class AtomService {
     
   }
   
+  regresarMenu(){
+    this.atomAnimation(true);
+
+    setTimeout(() => {
+      //Cerra todas las ventanas
+      
+      this.contact=false;
+
+      //Mostrar los iconos y la animación
+      this.mostrarIconos = true;
+      this.animationIconosIn = true;  
+    }, 750);
+    setTimeout(() => {
+      this.atomAnimation(false);  
+    }, 1000);
+
+
+  }
+  
+
   ocultarIconos(){
     this.animationIconos = true;
     this.atomAnimation(true);
