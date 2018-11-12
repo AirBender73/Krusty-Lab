@@ -10,6 +10,7 @@ import { AtomComponent } from './atom/atom.component';
 //SERVICIOS
 import { AtomService } from './servicios/atom.service';
 import { ContactInfoComponent } from './contact-info/contact-info.component';
+import { PortafolioComponent } from './portafolio/portafolio.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ContactInfoComponent } from './contact-info/contact-info.component';
     HomeComponent,
     ContactComponent,
     AtomComponent,
-    ContactInfoComponent
+    ContactInfoComponent,
+    PortafolioComponent
   ],
   imports: [
     BrowserModule,

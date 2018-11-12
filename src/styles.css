@@ -27,26 +27,6 @@
     font-family: Comfortaa-Regular;
 }
 
-.justify {
-    text-align: justify;
-}
-
-.text-black {
-    color: black;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-left {
-    text-align: left;
-}
-
 .break-word {
     word-wrap: break-word;
 }
@@ -61,7 +41,7 @@ body {
     border-radius: 20px !important;
 }
 
-.social {
+.icon-social {
     font-size: 30px;
 }
 
@@ -72,10 +52,6 @@ body {
 
 .icon-contact {
     font-size: 20px;
-}
-
-.btn-back {
-    font-size: 33px !important;
 }
 
 

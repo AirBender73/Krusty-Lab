@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { log } from 'util';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +12,14 @@ export class AtomService {
    width: number = 100;
    height: number = 100;
 
-   mostrarIconos: boolean = true;
+   mostrarIconos: boolean = false;
    animationIconos: boolean = false;
    animationIconosIn: boolean = false;
    acelerarAtomo: boolean = false;
   
    contact: boolean = false;
-   portafolio: boolean = false; 
+   portafolio: boolean = true;
+   proyectos: boolean = false;  
 
  //AUDIO
  backgrounMuted: boolean = false;
@@ -32,15 +34,22 @@ export class AtomService {
 
   navegar(option){
     this.ocultarIconos();
+    this.proyectos = false;
+    this.portafolio = false;
+    this.contact = false;
     setTimeout(() => {
       switch (option){
         case 'contact':
           console.log("FUNCIONA EL CONTACTO");
           this.contact = true;
         break;
-        case this.portafolio:
+        case 'portafolio':
+          console.log("FUNCIONA EL PORTAFOLIO");
           this.portafolio = true;
         break;
+        case 'proyectos':
+          console.log("FUNCIONA PROYECTOS");
+          this.proyectos = true;
       }
     }, 750);
     
@@ -48,10 +57,12 @@ export class AtomService {
   
   regresarMenu(){
     this.atomAnimation(true);
+    
 
     setTimeout(() => {
       //Cerra todas las ventanas
-      
+      this.proyectos = false;
+      this.portafolio = false;
       this.contact=false;
 
       //Mostrar los iconos y la animación

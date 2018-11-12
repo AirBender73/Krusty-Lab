@@ -39,3 +39,7 @@
 .btn-outline-dark:hover {
     width: 145px !important;
 }
+
+.btn-back {
+    font-size: 33px !important;
+}

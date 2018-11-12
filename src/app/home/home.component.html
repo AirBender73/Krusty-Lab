@@ -7,43 +7,53 @@
 <!-- ------------- MAIN-MENU ------------ -->
 
 <div class="container contenedor-atomo">
-
-
-
     <div class="row h-75 pt-5 justify-content-md-center">
+
         <!-- ------------ ICON-1-2 ------------ -->
 
         <div class="div-icons d-flex w-100 h-25">
             <button type="button" (click)="atomS.regresarMenu()" *ngIf="!atomS.mostrarIconos" class="btn btn-outline-light ctm-btn-none btn-back text-white comfortaa-b text-center m-auto">
                 <i class="mr-2 fas fa-angle-left"></i>
                 <a *ngIf="atomS.contact">CONTACTO</a>
+                <a *ngIf="atomS.portafolio">PORTAFOLIO</a>
+                <a *ngIf="atomS.proyectos">PROYECTOS</a>
             </button>
 
-            <div [ngClass]="{'bounceOut': atomS.animationIconos, 'bounceIn': atomS.animationIconosIn}" class="animated d-flex w-100" *ngIf="atomS.mostrarIconos">
+            <div [ngClass]="{'bounceOut': atomS.animationIconos, 'bounceIn': atomS.animationIconosIn}" class="animated d-flex w-100" *ngIf="atomS.mostrarIconos" (click)="atomS.ocultarIconos()">
                 <div class="col-6 text-right">
-                    <button (click)="atomS.ocultarIconos()" class="ctm-btn-none btn btn-outline-dark m-auto d-block">
-                        <img src="../../assets/img/idea.png" class="ctm-img">
+                    <button class="ctm-btn-none btn btn-outline-dark m-auto d-block" (click)="atomS.navegar('proyectos')">
+                        <img src="../../assets/img/icons/idea.png" class="ctm-img">
                     </button>
                 </div>
 
                 <div class="col-6 text-left">
-                    <button (click)="atomS.ocultarIconos()" class="ctm-btn-none btn btn-outline-dark m-auto d-block">
-                        <img src="../../assets/img/tactil.png" class="ctm-img">
+                    <button class="ctm-btn-none btn btn-outline-dark m-auto d-block" (click)="atomS.navegar('portafolio')">
+                        <img src="../../assets/img/icons/tactil.png" class="ctm-img">
                     </button>
                 </div>
             </div>
         </div>
+
         <!-- ------------ /ICON-1-2 ------------ -->
 
-        <!-- ------------ICON-2------------ -->
+        <!-- ------------ COL-IZQ ------------ -->
 
         <div class="col-4 align-self-center">
 
+            <!-- ------------ CONTACT ------------ -->
+
             <app-contact *ngIf="atomS.contact"></app-contact>
 
+            <!-- ------------ CONTACT ------------ -->
+
+            <!-- ------------ ICON-3 ------------ -->
+
             <button *ngIf="atomS.mostrarIconos" [ngClass]="{'bounceOut': atomS.animationIconos, 'bounceIn': atomS.animationIconosIn}" (click)="atomS.navegar('contact')" class="animated ctm-btn-none btn btn-outline-dark m-auto d-block">
-                <img src="../../assets/img/apoyar.png" class="ctm-img">
+                <img src="../../assets/img/icons/apoyar.png" class="ctm-img">
             </button>
+
+            <!-- ------------ ICON-3 ------------ -->
+
         </div>
 
         <div class="col-4 m-auto align-self-center">
@@ -54,21 +64,32 @@
 
         </div>
 
-        <!-- ------------ICONO-4------------ -->
+        <!-- ------------ COL-RIGHT ------------ -->
 
         <div class="col-4 align-self-center">
 
+            <!-- ------------ CONTACT-INFO ------------ -->
+
             <app-contact-info *ngIf="atomS.contact"></app-contact-info>
 
-            <button [ngClass]="{ 'bounceOut': atomS.animationIconos, 'bounceIn': atomS.animationIconosIn}" *ngIf="atomS.mostrarIconos" (click)="atomS.ocultarIconos() " class="animated ctm-btn-none btn btn-outline-dark m-auto d-block ">
-                <img src="../../assets/img/controlar.png " class="ctm-img">
+            <!-- ------------ /CONTACT-INFO ------------ -->
+
+            <!-- ------------ ICON-4 ------------ -->
+
+            <button [ngClass]="{ 'bounceOut': atomS.animationIconos, 'bounceIn': atomS.animationIconosIn}" *ngIf="atomS.mostrarIconos" (click)="atomS.ocultarIconos() " class="animated ctm-btn-none btn btn-outline-dark m-auto d-block">
+                <img src="../../assets/img/icons/controlar.png " class="ctm-img">
             </button>
+
+            <!-- ------------ /ICON-4 ------------ -->
+
         </div>
 
-        <!-- ------------/ICONO-4------------ -->
+        <!-- ------------ /COL-RIGHT ------------ -->
 
     </div>
 </div>
+
+<app-portafolio *ngIf="atomS.portafolio"></app-portafolio>
 
 <!-- ------------ /MAIN-MENU ------------ -->
 
