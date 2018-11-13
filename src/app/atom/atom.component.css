@@ -104,3 +104,46 @@ path.electron2 {
     margin-top: -8%;
     font-size: 38px;
 }
+
+
+/*------------------------------------------BREAKPOINTS----------------------------------------------*/
+
+
+/* BREAKPOINTS MOVIL*/
+
+@media screen and (min-width: 250px) and (max-width: 599px) {
+    .text-logo {
+        margin-top: -8%;
+        font-size: 13px;
+    }
+    .sm-atom {
+        width: 150px;
+    }
+}
+
+
+/* FIN MOVIL BREAKPOINTS*/
+
+
+/* BREAKPOINTS MOVIL HORIZONTAL*/
+
+@media screen and (min-width: 600px) and (max-width: 760px) {}
+
+
+/* FIN BREAKPOINTS MOVIL HORIZONTAL*/
+
+
+/* BREAKPOINTS TABLET VERTICAL*/
+
+@media screen and (min-width: 761px) and (max-width: 999px) {}
+
+
+/* FIN BREAKPOINTS TABLET VERTICAL*/
+
+
+/* BREAKPOINTS TABLET HORIZONTAL*/
+
+@media screen and (min-width: 1000px) and (max-width: 1250px) {}
+
+
+/* FIN BREAKPOINTS TABLET HORIZONTAL*/

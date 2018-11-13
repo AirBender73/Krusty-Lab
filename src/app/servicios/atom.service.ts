@@ -12,13 +12,13 @@ export class AtomService {
    width: number = 100;
    height: number = 100;
 
-   mostrarIconos: boolean = false;
+   mostrarIconos: boolean = true;
    animationIconos: boolean = false;
    animationIconosIn: boolean = false;
    acelerarAtomo: boolean = false;
   
    contact: boolean = false;
-   portafolio: boolean = true;
+   portafolio: boolean = false;
    proyectos: boolean = false;  
 
  //AUDIO

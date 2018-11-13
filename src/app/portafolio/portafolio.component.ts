@@ -11,7 +11,7 @@ export class PortafolioComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      var element = document.getElementById("box");
+      var element = document.getElementById("auto-scroll");
       element.scrollIntoView({block: "start", behavior: "smooth"});
     }, 500);
     

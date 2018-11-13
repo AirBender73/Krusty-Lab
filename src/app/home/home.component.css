@@ -1,33 +1,24 @@
-.row-atomo {
-    height: 100%;
-}
+/* --------------- BUTTONS --------------- */
 
-.contenedor-atomo {
-    height: 100%;
-}
 
-.contenedor-atomo {
-    height: 100%;
-    margin: auto;
-}
+/* ------ Custom Button Radius ------ */
 
-.ctm-copy {
-    bottom: 0;
-    position: fixed;
+.ctm-btn-rad {
+    border-width: 0px !important;
+    border-radius: 20px !important;
 }
 
 
-/* ------------Imagenes------------ */
-
-.ctm-img {
-    width: 100%;
-}
+/* ------ Volume Icon ------ */
 
 .ctm-btn-sound {
     bottom: 0;
     position: fixed;
     font-size: 23px;
 }
+
+
+/* ------ Main Icons ------ */
 
 .btn-outline-dark {
     width: 130px;
@@ -40,6 +31,91 @@
     width: 145px !important;
 }
 
+
+/* ------ Back Icon ------ */
+
 .btn-back {
     font-size: 33px !important;
 }
+
+
+/* --------------- TEXT --------------- */
+
+
+/* ------ Copy-right ------ */
+
+.ctm-copy {
+    bottom: 0;
+    position: fixed;
+}
+
+.order-last {
+    order: unset !important;
+}
+
+
+/*------------------------------------------BREAKPOINTS----------------------------------------------*/
+
+
+/* BREAKPOINTS MOVIL*/
+
+@media screen and (min-width: 250px) and (max-width: 599px) {
+    /* ------ Volume Icon ------ */
+    .ctm-btn-sound {
+        font-size: 13px;
+    }
+    /* ------ Main Icons ------ */
+    .btn-outline-dark {
+        width: 80px;
+        /* position: fixed; */
+    }
+    .btn-outline-dark:hover {
+        width: 90px !important;
+    }
+    /* ------ Back Icon ------ */
+    .btn-back {
+        font-size: 23px !important;
+    }
+    /* .h-sm-50 {
+        height: 75% !important;
+    } */
+    .order-last {
+        order: 13 !important;
+    }
+    .ctm-btn-icon {
+        margin-top: 7rem !important;
+    }
+    .h-75 {
+        height: 100% !important;
+    }
+    .h-25 {
+        height: 0 !important;
+    }
+}
+
+
+/* FIN MOVIL BREAKPOINTS*/
+
+
+/* BREAKPOINTS MOVIL HORIZONTAL*/
+
+@media screen and (min-width: 600px) and (max-width: 760px) {}
+
+
+/* FIN BREAKPOINTS MOVIL HORIZONTAL*/
+
+
+/* BREAKPOINTS TABLET VERTICAL*/
+
+@media screen and (min-width: 761px) and (max-width: 999px) {}
+
+
+/* FIN BREAKPOINTS TABLET VERTICAL*/
+
+
+/* BREAKPOINTS TABLET HORIZONTAL*/
+
+@media screen and (min-width: 1000px) and (max-width: 1250px) {}
+
+
+/* FIN BREAKPOINTS TABLET HORIZONTAL*/

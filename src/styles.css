@@ -27,8 +27,9 @@
     font-family: Comfortaa-Regular;
 }
 
-.break-word {
-    word-wrap: break-word;
+.smoke {
+    color: rgb(146, 146, 146) !important;
+    background-color: rgb(124, 124, 124);
 }
 
 body {
@@ -36,18 +37,8 @@ body {
     height: 100vh !important;
 }
 
-.ctm-btn-none {
-    border-width: 0px !important;
-    border-radius: 20px !important;
-}
-
 .icon-social {
     font-size: 30px;
-}
-
-.smoke {
-    color: rgb(146, 146, 146) !important;
-    background-color: rgb(124, 124, 124);
 }
 
 .icon-contact {
