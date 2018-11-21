@@ -11,6 +11,7 @@ import { AtomComponent } from './atom/atom.component';
 import { AtomService } from './servicios/atom.service';
 import { ContactInfoComponent } from './contact-info/contact-info.component';
 import { PortafolioComponent } from './portafolio/portafolio.component';
+import { ServiciosComponent } from './servicios/servicios.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PortafolioComponent } from './portafolio/portafolio.component';
     ContactComponent,
     AtomComponent,
     ContactInfoComponent,
-    PortafolioComponent
+    PortafolioComponent,
+    ServiciosComponent
   ],
   imports: [
     BrowserModule,

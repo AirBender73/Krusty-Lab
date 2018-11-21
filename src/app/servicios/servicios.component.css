@@ -1,0 +1,9 @@
+.ctm-btn-rad {
+    border-width: 0px !important;
+    border-radius: 20px !important;
+    background: rgb(204, 204, 204);
+}
+
+.card {
+    background-color: #c2c2c25e;
+}

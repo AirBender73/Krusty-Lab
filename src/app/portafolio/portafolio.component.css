@@ -60,7 +60,6 @@
 }
 
 .hovereffect:hover img {
-    /* filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter'); */
     filter: brightness(0.6);
     -webkit-filter: brightness(0.6);
 }
@@ -101,3 +100,67 @@
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+
+.order-12,
+.order-1,
+.order-3 {
+    order: unset !important;
+}
+
+
+/*------------------------------------------BREAKPOINTS----------------------------------------------*/
+
+
+/* BREAKPOINTS MOVIL*/
+
+@media screen and (min-width: 250px) and (max-width: 599px) {
+    .t-portafolio {
+        font-size: 20px;
+    }
+    .order-12 {
+        order: 12 !important;
+    }
+    .order-1 {
+        order: 1 !important;
+    }
+    .order-3 {
+        order: 3 !important;
+    }
+    .g-content,
+    .g-line {
+        width: 100%;
+    }
+    .vertical-line {
+        border: 1px rgb(93, 131, 255);
+        width: 100%;
+        height: 0%;
+        border-style: dashed;
+    }
+}
+
+
+/* FIN MOVIL BREAKPOINTS*/
+
+
+/* BREAKPOINTS MOVIL HORIZONTAL*/
+
+@media screen and (min-width: 600px) and (max-width: 760px) {}
+
+
+/* FIN BREAKPOINTS MOVIL HORIZONTAL*/
+
+
+/* BREAKPOINTS TABLET VERTICAL*/
+
+@media screen and (min-width: 761px) and (max-width: 999px) {}
+
+
+/* FIN BREAKPOINTS TABLET VERTICAL*/
+
+
+/* BREAKPOINTS TABLET HORIZONTAL*/
+
+@media screen and (min-width: 1000px) and (max-width: 1250px) {}
+
+
+/* FIN BREAKPOINTS TABLET HORIZONTAL*/

@@ -12,14 +12,14 @@ export class AtomService {
    width: number = 100;
    height: number = 100;
 
-   mostrarIconos: boolean = true;
+   mostrarIconos: boolean = false;
    animationIconos: boolean = false;
    animationIconosIn: boolean = false;
    acelerarAtomo: boolean = false;
   
    contact: boolean = false;
    portafolio: boolean = false;
-   proyectos: boolean = false;  
+   servicios: boolean = true;  
 
  //AUDIO
  backgrounMuted: boolean = false;
@@ -34,7 +34,7 @@ export class AtomService {
 
   navegar(option){
     this.ocultarIconos();
-    this.proyectos = false;
+    this.servicios = false;
     this.portafolio = false;
     this.contact = false;
     setTimeout(() => {
@@ -47,9 +47,9 @@ export class AtomService {
           console.log("FUNCIONA EL PORTAFOLIO");
           this.portafolio = true;
         break;
-        case 'proyectos':
-          console.log("FUNCIONA PROYECTOS");
-          this.proyectos = true;
+        case 'servicios':
+          console.log("FUNCIONA SERVICIOS");
+          this.servicios = true;
       }
     }, 750);
     
@@ -61,7 +61,7 @@ export class AtomService {
 
     setTimeout(() => {
       //Cerra todas las ventanas
-      this.proyectos = false;
+      this.servicios = false;
       this.portafolio = false;
       this.contact=false;
 
