@@ -1,0 +1,46 @@
+.ctm-btn-rad {
+    border-width: 0px !important;
+    border-radius: 20px !important;
+    background: rgb(204, 204, 204);
+}
+
+.card {
+    background-color: #c2c2c25e;
+    height: 480px;
+}
+
+.btn {
+    margin: 0 !important;
+}
+
+.btn-dark {
+    border-style: solid;
+    border-color: #575757b7;
+    border-width: 1px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.btn-outline-dark {
+    background-color: #77777738 !important;
+    border-style: solid;
+    border-color: #696969cb;
+    border-width: 1px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.btn-outline-dark:hover {
+    background-color: #53535338 !important;
+}
+
+.mt-5 {
+    margin-top: 8rem !important;
+}
+
+p {
+    text-transform: none !important;
+    padding: 0 !important;
+}
