@@ -1,0 +1,13 @@
+<router-outlet>
+
+</router-outlet>
+
+<!-- ------------ AUDIO ------------ -->
+<div class="p-4 text-white btn-sound" (click)="muted()">
+    <i *ngIf="!backgroundMuted" class="material-icons pointer">volume_up</i>
+    <i *ngIf="backgroundMuted" class="material-icons pointer">volume_off</i>
+</div>
+
+<audio controls class="d-none" id="backgroundSound">
+    <source src="../../../assets/sounds/background-sound.mp3" type="audio/mpeg">
+</audio>

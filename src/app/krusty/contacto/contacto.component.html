@@ -1,0 +1,81 @@
+<div class="container-fluid py-5 animated fadeIn">
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 m-auto text-center">
+            <div class="btn ctm-btn text-white" (click)="volver()">
+                <i class="d-inline-block material-icons">arrow_back</i>
+                <h1 class="d-inline-block">Contácto</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-12 middle ctm-padding">
+
+            <div class="row">
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 text-white text-center">
+
+                    <h4>Información de contácto</h4>
+                    <hr class="bg-white">
+
+                    <p class="text-justify">
+                        Somos una empresa desarrolladora de software comprometida con
+                        potenciar el alcance de tu proyecto.
+                    </p>
+
+                    <p><i class="fab fa-whatsapp mr-2"></i> +52 993 334 4562</p>
+                    <p><i class="far fa-envelope mr-2"></i> krusty-lab@krusty.lab</p>
+
+                    <div class="row mt-2">
+                        <div class="col-6"><i class="btn text-white icon-social fab fa-facebook-square"></i></div>
+                        <div class="col-6"><i class="btn text-white icon-social fab fa-twitter"></i></div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-xl-4 col-lg-4 d-lg-block d-none m-auto">
+                    <app-atomo></app-atomo>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+
+                    <form>
+                        <div>
+                            <label for="exampleInputEmail1" class="comfortaa-r bmd-label-floating text-white">
+                                Correo electrónico
+                            </label>
+                            <input type="email" class="smoke comfortaa-l form-control"
+                                placeholder="ej. correo@mail.com">
+                        </div>
+
+                        <div class="pt-3">
+                            <label for="exampleSelect1" class="comfortaa-r bmd-label-floating text-white">Asunto</label>
+                            <select class="smoke form-control" id="exampleSelect1">
+                                <option>Cotización</option>
+                                <option>Queja</option>
+                                <option>Sugerencias</option>
+                                <option>Otros..</option>
+                            </select>
+                        </div>
+
+                        <div class="pt-3">
+                            <label for="exampleInputEmail1"
+                                class="comfortaa-r bmd-label-floating text-white">Mensaje</label>
+                            <textarea rows="5" class="smoke form-control"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-block btn btn-raised mt-3 bg-atom-blue text-white">
+                            ENVIAR EMAIL
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
