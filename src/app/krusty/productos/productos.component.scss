@@ -1,3 +1,21 @@
+* {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.delay {
+    animation-duration: 3.8s;
+}
+
+.h-100vh {
+    height: 100vh;
+}
+
+.btn-back {
+    z-index: 1;
+    position: fixed;
+}
+
 .atom-prod {
     position: absolute;
     top: 25%;
@@ -12,4 +30,58 @@
 
 .h-25-rem {
     height: 25rem;
+}
+
+.framework {
+    z-index: 5;
+    position: absolute;
+}
+
+.framework1 {
+    z-index: 1;
+    position: absolute;
+}
+
+.carrusel {
+    z-index: 3;
+}
+
+.carousel-control {
+    z-index: 8;
+}
+
+.producto {
+    position: absolute;
+    top: 15%;
+}
+
+.volver {
+    font-size: 2.3rem;
+}
+
+.arrows {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    color: #fff;
+    text-align: center;
+    opacity: .5;
+}
+
+.arrows>i {
+    font-size: 6rem;
+}
+
+@media (min-width: 0px) and (max-width: 767.98px) {
+    .desc-text {
+        font-size: 0.8rem;
+    }
+
+    .arrows>i {
+        font-size: 3rem;
+    }
 }

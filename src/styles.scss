@@ -25,10 +25,7 @@
     src: url(../src/assets/fonts/Domine-Regular.ttf);
 }
 
-.domine {
-    font-family: Domine-Regular;
-}
-
+// KRUSTY-LAB
 .comfortaa-b {
     font-family: Comfortaa-Bold;
 }
@@ -41,8 +38,14 @@
     font-family: Comfortaa-Regular;
 }
 
+// TU CHAMBITA
 .lobster {
     font-family: Lobster-Regular;
+}
+
+// MATILDE
+.domine {
+    font-family: Domine-Regular;
 }
 
 // <!-- FUENTES GOOGLE Y MATERIAL ICONS -->
@@ -84,6 +87,10 @@ body {
 
 .pointer {
     cursor: pointer;
+}
+
+.pointer:hover {
+    color: rgb(190, 190, 190);
 }
 
 .middle {
