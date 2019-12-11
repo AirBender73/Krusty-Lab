@@ -1,1 +1,83 @@
-<p>portafolio works!</p>
+<!-- ---------- VOLVER ---------- -->
+<div class="btn bmd-btn-fab btn-back" (click)="volver()">
+    <i class="text-white material-icons mt-3 volver">arrow_back</i>
+</div>
+
+
+<div class="col-12 animated fadeIn">
+
+    <div>
+        <div class="row h-100vh">
+
+            <!-- -------------------- COLLAPSE -------------------- -->
+            <div class="col-1"></div>
+
+            <div class="col-5 m-auto">
+
+                <div>
+
+                    <div *ngFor="let producto of productos; let i = index">
+
+                        <!-- ---------- TITULO COLLAPSE ---------- -->
+                        <div class="row">
+                            <div class="col-10">
+                                <h4 class="mb-0 pt-08">
+                                    {{producto.nombre}}
+                                </h4>
+                            </div>
+                            <div class="col-2 text-right">
+                                <i class="material-icons show-arrow pointer collapsible" (click)="collapse(i)">
+                                    keyboard_arrow_down
+                                </i>
+                            </div>
+                        </div>
+
+                        <!-- ---------- DESCRIPCION COLLAPSE ---------- -->
+                        <div id="{{producto.collapse}}" class="row content">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12 pt-4">
+                                        <h6>
+                                            {{producto.desc}}
+                                        </h6>
+                                        <p>
+                                            {{producto.desc2}}
+                                        </p>
+                                        <p>
+                                            {{producto.desc3}}
+                                        </p>
+                                        <p>
+                                            {{producto.desc4}}
+                                        </p>
+                                        <p>
+                                            {{producto.desc5}}
+                                        </p>
+                                        <p>
+                                            {{producto.desc6}}
+                                        </p>
+                                        <p>
+                                            {{producto.desc7}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -------------------- IMAGENES DEL PORTAFOLIO --------------------   -->
+            <div class="col-5 m-auto">
+                <div class="row">
+                    <div class="col-9 ml-auto">
+                        <img class="img-fluid" src="./assets/img/portafolio/conoceteyprotegete/frame.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-1"></div>
+
+
+        </div>
+    </div>
+</div>

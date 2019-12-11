@@ -25,7 +25,7 @@
     src: url(../src/assets/fonts/Domine-Regular.ttf);
 }
 
-// KRUSTY-LAB
+// KRUS||TY-LAB
 .comfortaa-b {
     font-family: Comfortaa-Bold;
 }
@@ -60,6 +60,16 @@
 body {
     // background-color: #03050a;
     background-color: #0c1825;
+    color: white;
+}
+
+.h-100vh {
+    height: 100vh;
+}
+
+.btn-back {
+    z-index: 1;
+    position: fixed;
 }
 
 .bg-dark-transparent {

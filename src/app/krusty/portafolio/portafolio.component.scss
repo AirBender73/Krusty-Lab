@@ -1,0 +1,13 @@
+.show-arrow {
+    font-size: 3rem;
+}
+
+.pt-08 {
+    padding-top: .8rem;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
